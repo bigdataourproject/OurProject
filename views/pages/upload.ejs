@@ -1,0 +1,59 @@
+<!-- views/pages/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <!-- Including external css -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+    <div class="jumbotron">
+      <h2>Welcome, this is market analyst</h2>
+      <p>You can find analytics that you want according to our search engines.</p>
+      <p>You can upload invoice files from the supermarket.</p>
+    </div>
+    <div class="row">
+		    <div class="col-md-2">
+				<!-- EMPTY div -->
+		    </div>
+		    <div class="col-md-8 form">
+			  <br><br>
+			  <!-- Form starts here -->
+			     <form action="upload" method="post" enctype="multipart/form-data">
+				         <!-- Field to choose the files to be uploaded -->
+				         <label class="up_styles">
+					           <input type="file" name="upfile" multiple />
+				         </label>
+				         <br>
+				         <!-- Button to upload the choosed files -->
+				         <input class="sub" type="submit" value="Upload">
+			     </form>
+			     <br><br>
+		    </div>
+		    <div class="col-md-2">
+				      <!-- EMPTY div -->
+		    </div>
+<!--
+    <form class="fileupload" action="upload" method="post" enctype="multipart/form-data">
+      <p>Upload File Here<p>
+      <input type="file" class="btn btn-info" name="upfile" value="">
+      <input type="submit" class="btn btn-success" value="Submit">
+    </form>
+  -->
+        <br><br>
+    </div>
+    <br><br>
+</main>
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>

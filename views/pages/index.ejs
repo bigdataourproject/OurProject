@@ -1,0 +1,97 @@
+<!-- views/pages/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div class="jumbotron">
+      <h2>Welcome, this is market analyst</h2>
+      <p>You can find analytics that you want according to our search engines.</p>
+      <p>You can upload invoice files from the supermarket.</p>
+		</div>
+		<form method="post" action="/answer1">
+			<fieldset>
+				<legend>First option (One time interval):</legend>
+        Product:<br>
+				<select name="option">
+					<option value="first">Book Title</option>
+					<option value="second">Serial Number</option>
+				</select><br>
+				<br><br>
+        Choose a date range:<br>
+        <input type="text" name="daterange1" value="01/01/2018 - 01/15/2018" />
+        <script>
+          $(function() {
+            $('input[name="daterange1"]').daterangepicker({
+              opens: 'left'
+            });
+          });
+        </script>
+        <br><br>
+				<input type="submit" class="btn btn-success" value="Submit">
+				<input type="reset" class="btn btn-info">
+        <br><br>
+			</fieldset>
+		</form>
+		<form method="post" action="/answer2">
+			<fieldset>
+				<legend>Second option (Two time intervals):</legend>
+        Product:<br>
+				<select name="option">
+					<option value="first">Book Title</option>
+					<option value="second">Serial Number</option>
+				</select><br>
+				<br><br>
+        Choose first date range:<br>
+        <input type="text" name="daterange2" value="01/01/2018 - 01/15/2018" />
+        <script>
+          $(function() {
+            $('input[name="daterange2"]').daterangepicker({
+              opens: 'left'
+            });
+          });
+        </script>
+        <br><br>
+        Choose second date range:<br>
+        <input type="text" name="daterange3" value="01/01/2018 - 01/15/2018" />
+        <script>
+          $(function() {
+            $('input[name="daterange3"]').daterangepicker({
+              opens: 'left'
+            });
+          });
+        </script>
+        <br><br>
+				<input type="submit" class="btn btn-success" value="Submit">
+				<input type="reset" class="btn btn-info">
+        <br><br>
+			</fieldset>
+		</form>
+		<form method="post" action="/answer3">
+			<fieldset>
+				<legend>Third option (Association):</legend>
+				Product:<br>
+				<select name="option">
+					<option value="first">Book Title</option>
+					<option value="second">Serial Number</option>
+				</select>
+				<br><br>
+				<input type="submit" class="btn btn-success" value="Submit">
+				<input type="reset" class="btn btn-info">
+			</fieldset>
+		</form>
+    <br><br>
+	</main>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+
+</body>
+</html>
